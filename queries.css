@@ -1,0 +1,30 @@
+@media (max-width: 48em) {
+  html {
+    /* 8/16=0.5 = 50% */
+    font-size: 50%;
+  }
+}
+@media (max-width: 38em) {
+  html {
+    /* 8/16=0.5 = 50% */
+    font-size: 60%;
+  }
+  .pagina {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+  }
+  .gokuzinho {
+    display: none;
+  }
+  .placar {
+    order: -1;
+  }
+}
+@media (max-width: 21em) {
+  html {
+    /* 8/16=0.5 = 50% */
+    font-size: 50%;
+  }
+}

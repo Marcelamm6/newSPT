@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* clip-path: polygon(5% 0%, 100% 5%, 95% 100%, 0% 100%); */
+
+/* #fd7e14 #5ca4de #FADF4A #D90B0B*/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  background-image: url(images/sky.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  font-family: 'roboto';
+  color: #424040;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagina {
+  max-width: 120rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  justify-items: center;
+  /* margin: 0 auto; */
+}
+
+.carta,
+.cartaV {
+  background-image: url(images/karimhouse.png);
+  background-size: cover;
+
+  width: 33rem;
+  height: 42.7rem;
+
+  border: 0.4rem solid #fadf4a;
+  border-radius: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+.carta {
+  background-image: url(images/karimhouse1.png);
+}
+
+.esquerda {
+  position: relative;
+}
+
+.super-trunfo {
+  margin-top: 5rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.sp {
+  display: none;
+}
+
+.esfera {
+  width: 5rem;
+}
+
+.direita {
+  /* display: none; */
+}
+
+.cartaV {
+  display: none;
+}
+
+.imagem {
+  width: 30rem;
+  height: 20rem;
+
+  margin: 0 auto;
+}
+
+.atributos {
+  margin-top: 0.5rem;
+}
+
+.caracteristicas {
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  padding: 0.3rem 2rem;
+
+  clip-path: polygon(5% 0%, 100% 5%, 95% 100%, 0% 100%);
+  background-color: #dddddd;
+}
+
+.caracteristicas:hover {
+  background-color: rgb(238, 238, 238);
+  cursor: pointer;
+}
+
+.numero-nome {
+  background: none;
+  font-weight: 700;
+  font-size: 3rem;
+  -webkit-text-stroke-width: 0.1rem;
+  -webkit-text-stroke-color: #ddd;
+}
+
+.numero,
+.nome {
+  margin-top: 0.3rem;
+}
+
+.numero-nome:hover {
+  background: none;
+  cursor: default;
+}
+
+.gokuzinho {
+  width: 40rem;
+  height: 11.1rem;
+  margin-top: 3rem;
+}
+
+.placar {
+  font-size: 2rem;
+  width: 30rem;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  position: relative;
+}
+
+.nomes {
+  width: 25rem;
+  height: 5rem;
+  padding: 1.5rem;
+  background-color: #fadf4a;
+  clip-path: polygon(0 1%, 100% 1%, 95% 100%, 5% 100%);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  font-weight: 600;
+}
+
+.pontos {
+  width: 6rem;
+  height: 5rem;
+  background-color: #d90b0b;
+  clip-path: polygon(0 1%, 100% 1%, 90% 100%, 10% 100%);
+  position: absolute;
+  margin-top: -1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transform: scale(1.2);
+  transform-origin: bottom center; */
+  font-weight: 600;
+}
