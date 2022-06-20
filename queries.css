@@ -1,7 +1,7 @@
 @media (max-width: 50em) {
   html {
     /* 8/16=0.5 = 50% */
-    font-size: 50%;
+    font-size: 40%;
   }
   body {
     background: linear-gradient(#bfcdd8, #5ca4de);

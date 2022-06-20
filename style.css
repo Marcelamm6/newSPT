@@ -148,18 +148,20 @@ body {
 }
 
 .nomes {
-  width: 25rem;
+  width: 30rem;
   height: 5rem;
-  padding: 1.5rem;
+  padding: 2rem;
   background-color: #fadf4a;
   clip-path: polygon(0 1%, 100% 1%, 95% 100%, 5% 100%);
   display: flex;
+  align-items: center;
   justify-content: space-between;
   position: relative;
   font-weight: 600;
 }
 
 .pontos {
+  color: #f8f9fa;
   width: 6rem;
   height: 5rem;
   background-color: #d90b0b;
@@ -167,6 +169,8 @@ body {
   position: absolute;
   margin-top: -1rem;
   display: flex;
+  padding: 0 4rem;
+  gap: 1.5rem;
   justify-content: center;
   align-items: center;
   /* transform: scale(1.2);
