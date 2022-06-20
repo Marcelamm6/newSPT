@@ -12,7 +12,7 @@
 @media (max-width: 38em) {
   html {
     /* 8/16=0.5 = 50% */
-    font-size: 50%;
+    font-size: 65%;
   }
   .pagina {
     display: flex;
