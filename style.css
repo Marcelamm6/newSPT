@@ -42,7 +42,7 @@ body {
   background-size: cover;
 
   width: 33rem;
-  height: 42.7rem;
+  height: 45rem;
 
   border: 0.4rem solid #fadf4a;
   border-radius: 2rem;
@@ -103,7 +103,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.8rem;
-  padding: 0.3rem 2rem;
+  padding: 0.5rem 2rem;
 
   clip-path: polygon(5% 0%, 100% 5%, 95% 100%, 0% 100%);
   background-color: #dddddd;
