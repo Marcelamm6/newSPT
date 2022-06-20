@@ -3,9 +3,6 @@
     /* 8/16=0.5 = 50% */
     font-size: 40%;
   }
-  body {
-    margin-top: 3rem;
-  }
 }
 @media (max-width: 38em) {
   html {
