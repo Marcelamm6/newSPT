@@ -3,12 +3,16 @@
     /* 8/16=0.5 = 50% */
     font-size: 50%;
   }
+  body {
+    background: linear-gradient(#bfcdd8, #5ca4de);
+    /* background-image: none; */
+    margin-top: 3rem;
+  }
 }
 @media (max-width: 38em) {
-  body {
-    background-color: #5ca4de;
-    background-image: none;
-    margin-top: 3rem;
+  html {
+    /* 8/16=0.5 = 50% */
+    font-size: 50%;
   }
   .pagina {
     display: flex;
