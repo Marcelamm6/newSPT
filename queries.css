@@ -9,6 +9,11 @@
     /* 8/16=0.5 = 50% */
     font-size: 60%;
   }
+  body {
+    background-color: #5ca4de;
+    background-image: none;
+    margin-top: 3rem;
+  }
   .pagina {
     display: flex;
     flex-direction: column;
