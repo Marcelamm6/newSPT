@@ -11,6 +11,7 @@
   }
   body {
     height: auto;
+    margin-top: 3rem;
   }
   .pagina {
     grid-template-columns: 1fr;
