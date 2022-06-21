@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  /* height: 100vh; */
+  height: 100vh;
   background: linear-gradient(#bfcdd8, #5ca4de);
   background-size: cover;
   background-repeat: no-repeat;
