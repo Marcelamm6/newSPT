@@ -502,7 +502,7 @@ atributos.addEventListener('click', function (e) {
       // console.log(player1, player2);
       cartaPlayer1(0);
       cartaPlayer2(0);
-    }, 3000);
+    }, 2000);
     pontos2.textContent++;
   }
   if (atributo1 == atributo2) {
@@ -522,6 +522,6 @@ atributos.addEventListener('click', function (e) {
       // console.log(player1, player2);
       cartaPlayer1(0);
       cartaPlayer2(0);
-    }, 3000);
+    }, 2000);
   }
 });
