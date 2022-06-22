@@ -38,7 +38,8 @@ body {
 }
 
 .carta,
-.cartaV {
+.cartaV,
+.cartaVE {
   background-image: url(images/karimhouse.png);
   background-size: cover;
 
@@ -59,6 +60,7 @@ body {
 
 .esquerda {
   position: relative;
+  display: flex;
 }
 
 .super-trunfo {
@@ -84,7 +86,11 @@ body {
 }
 
 .cartaV {
-  display: block;
+  display: flex;
+}
+
+.cartaVE {
+  display: none;
 }
 
 .imagem {

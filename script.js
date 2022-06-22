@@ -272,13 +272,13 @@ const _7C = {
 };
 const _7D = {
   numero: '7D',
-  nome: 'Vnumeroel',
+  nome: 'Videl',
   forca: 500,
   altura: 1.65,
   inteligencia: 154,
   tecnicas: 55,
   transformacoes: 0,
-  imagem: 'images/vnumeroel.png',
+  imagem: 'images/videl.png',
 };
 const _8B = {
   numero: '8B',
@@ -333,9 +333,9 @@ const characters = [
   _8B,
   _8C,
 ];
-
+///////////////////////////////////////////////////////////////////
 ////////////Separando as cartas de forma aleatória/////////////////
-
+///////////////////////////////////////////////////////////////////
 let cartas = [
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
     21, 22, 23, 24, 25, 26, 27, 28, 29,
@@ -357,7 +357,11 @@ let player2 = aleatoriasCartas;
 
 // console.log(player1, player2);
 
+// console.log(player1[0]);
+
+/////////////////////////////////////////////////////////////////////
 ///////////// Colocando as informações nas cartas (html)/////////////
+////////////////////////////////////////////////////////////////////
 
 let numero = document.querySelectorAll('.numero');
 let nome = document.querySelectorAll('.nome');
@@ -401,40 +405,104 @@ function formaNumero(numero) {
   return new Intl.NumberFormat('pt-BR').format(numero);
 }
 
+/////////////////////////////////////////////////////////////
 ///////////////////////Comparando cartas/////////////////////
+////////////////////////////////////////////////////////////
 
 const atributos = document.querySelector('.atributos');
 const cartaDireita = document.querySelector('.direita');
+const cartaEsquerda = document.querySelector('.esquerda');
 const cartaVirada = document.querySelector('.cartaV');
+const cartaViradaE = document.querySelector('.cartaEV');
+
+const pontos1 = document.querySelector('.pontos1');
+const pontos2 = document.querySelector('.pontos2');
+
+pontos1.textContent = 0;
+pontos2.textContent = 0;
+
+////////valor clicado//////////
 
 atributos.addEventListener('click', function (e) {
   const clicado = e.target.closest('.caracteristicas');
   const valorClicado = clicado.children[1].classList[0];
 
-  // console.log(clicado);
-  // console.log(valorClicado);
-
   let valor2 = clicado.children[1].classList[0];
-  const valorCarta2 = document.querySelector(`.direita .${valor2}`).innerHTML;
+  // const valorCarta2 = document.querySelector(`.direita .${valor2}`).innerHTML;
 
   let idJogador1 = clicado
     .closest('.carta')
     .querySelector('.numero').textContent;
 
-  console.log(idJogador1);
+  let idJogador2 = document.querySelector('.carta.direita .numero').textContent;
 
-  let atributo = characters.find(x => x.numero == idJogador1)[valorClicado];
-  console.log(atributo);
+  // console.log(idJogador1);
+  // console.log(idJogador2);
 
-  // console.log(valorCarta2);
-  // console.log(valorClicado > valorCarta2);
+  let atributo1 = characters.find(x => x.numero == idJogador1)[valorClicado];
+  let atributo2 = characters.find(x => x.numero == idJogador2)[valor2];
+  // console.log(atributo1);
+  // console.log(atributo2);
 
-  if (valorClicado > valorCarta2) {
+  /////////comparando////////////
+
+  if (atributo1 > atributo2) {
     cartaVirada.style.display = 'none';
-    cartaDireita.style.display = 'block';
+    cartaDireita.style.display = 'flex';
+    document.querySelector(`.${valorClicado}`).style.background = '#8ce99a';
+    document.querySelector(`.direita .${valor2}`).style.background = '#ff8787';
     setTimeout(() => {
-      cartaVirada.style.display = 'block';
+      cartaVirada.style.display = 'flex';
       cartaDireita.style.display = 'none';
+      document.querySelector(`.${valorClicado}`).style.background = 'none';
+      document.querySelector(`.direita .${valor2}`).style.background = 'none';
+      player1.push(player2[0]);
+      player2.shift([0]);
+      player1.push(player1[0]);
+      player1.shift([0]);
+      // console.log(player1, player2);
+      cartaPlayer1(0);
+      cartaPlayer2(0);
+    }, 4000);
+    pontos1.textContent++;
+  }
+  if (atributo1 < atributo2) {
+    cartaVirada.style.display = 'none';
+    cartaDireita.style.display = 'flex';
+    document.querySelector(`.${valorClicado}`).style.background = '#ff8787';
+    document.querySelector(`.direita .${valor2}`).style.background = '#8ce99a';
+    setTimeout(() => {
+      cartaVirada.style.display = 'flex';
+      cartaDireita.style.display = 'none';
+      document.querySelector(`.${valorClicado}`).style.background = 'none';
+      document.querySelector(`.direita .${valor2}`).style.background = 'none';
+      player2.push(player1[0]);
+      player1.shift([0]);
+      player2.push(player2[0]);
+      player2.shift([0]);
+      // console.log(player1, player2);
+      cartaPlayer1(0);
+      cartaPlayer2(0);
+    }, 4000);
+    pontos2.textContent++;
+  }
+  if (atributo1 == atributo2) {
+    cartaVirada.style.display = 'none';
+    cartaDireita.style.display = 'flex';
+    document.querySelector(`.${valorClicado}`).style.background = '#ffe066';
+    document.querySelector(`.direita .${valor2}`).style.background = '#ffe066';
+    setTimeout(() => {
+      cartaVirada.style.display = 'flex';
+      cartaDireita.style.display = 'none';
+      document.querySelector(`.${valorClicado}`).style.background = 'none';
+      document.querySelector(`.direita .${valor2}`).style.background = 'none';
+      player1.push(player1[0]);
+      player1.shift([0]);
+      player2.push(player2[0]);
+      player2.shift([0]);
+      // console.log(player1, player2);
+      cartaPlayer1(0);
+      cartaPlayer2(0);
     }, 4000);
   }
 });
