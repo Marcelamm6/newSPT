@@ -355,7 +355,7 @@ while (i--) {
 let player1 = aleatoriasCartas.splice(15);
 let player2 = aleatoriasCartas;
 
-// console.log(player1, player2);
+console.log(player1, player2);
 
 // console.log(player1[0]);
 
@@ -405,6 +405,20 @@ function formaNumero(numero) {
   return new Intl.NumberFormat('pt-BR').format(numero);
 }
 
+let superTrunfo1 = document.querySelector('.sp--esquerda');
+let superTrunfo2 = document.querySelector('.sp--direita');
+
+let nomeJ1 = document.querySelector('.carta.esquerda .nome').textContent;
+console.log(nomeJ1);
+
+// FIXME:
+// function spt() {
+//   if (player1[0] == 1) {
+//     superTrunfo1.style.display = 'flex';
+//   }
+// }
+// spt();
+
 /////////////////////////////////////////////////////////////
 ///////////////////////Comparando cartas/////////////////////
 ////////////////////////////////////////////////////////////
@@ -436,13 +450,18 @@ atributos.addEventListener('click', function (e) {
 
   let idJogador2 = document.querySelector('.carta.direita .numero').textContent;
 
+  // console.log(nomeJ1);
   // console.log(idJogador1);
   // console.log(idJogador2);
 
   let atributo1 = characters.find(x => x.numero == idJogador1)[valorClicado];
   let atributo2 = characters.find(x => x.numero == idJogador2)[valor2];
+
   // console.log(atributo1);
   // console.log(atributo2);
+
+  let nomeJ1 = document.querySelector('.carta.esquerda .nome').textContent;
+  console.log(nomeJ1);
 
   /////////comparando////////////
 
@@ -463,7 +482,7 @@ atributos.addEventListener('click', function (e) {
       // console.log(player1, player2);
       cartaPlayer1(0);
       cartaPlayer2(0);
-    }, 4000);
+    }, 3000);
     pontos1.textContent++;
   }
   if (atributo1 < atributo2) {
@@ -483,7 +502,7 @@ atributos.addEventListener('click', function (e) {
       // console.log(player1, player2);
       cartaPlayer1(0);
       cartaPlayer2(0);
-    }, 4000);
+    }, 3000);
     pontos2.textContent++;
   }
   if (atributo1 == atributo2) {
@@ -503,6 +522,6 @@ atributos.addEventListener('click', function (e) {
       // console.log(player1, player2);
       cartaPlayer1(0);
       cartaPlayer2(0);
-    }, 4000);
+    }, 3000);
   }
 });
