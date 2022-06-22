@@ -1,304 +1,304 @@
 'use strict';
 
 const _1A = {
-  id: '1A',
-  name: 'Goten',
-  strength: 90000000,
-  height: 1.4,
-  intellect: 95,
-  technique: 105,
-  transformation: 1,
-  img: 'images/goten.png',
+  numero: '1A',
+  nome: 'Goten',
+  forca: 90000000,
+  altura: 1.4,
+  inteligencia: 95,
+  tecnicas: 105,
+  transformacoes: 1,
+  imagem: 'images/goten.png',
 };
 const _1B = {
-  id: '1B',
-  name: 'Goku',
-  strength: 500000000,
-  height: 1.85,
-  intellect: 150,
-  technique: 390,
-  transformation: 4,
-  img: 'images/Goku1.png',
+  numero: '1B',
+  nome: 'Goku',
+  forca: 500000000,
+  altura: 1.85,
+  inteligencia: 150,
+  tecnicas: 390,
+  transformacoes: 4,
+  imagem: 'images/Goku1.png',
 };
 const _1C = {
-  id: '1C',
-  name: 'Vegeta',
-  strength: 460000000,
-  height: 1.69,
-  intellect: 160,
-  technique: 245,
-  transformation: 3,
-  img: 'images/vegeta.png',
+  numero: '1C',
+  nome: 'Vegeta',
+  forca: 460000000,
+  altura: 1.69,
+  inteligencia: 160,
+  tecnicas: 245,
+  transformacoes: 3,
+  imagem: 'images/vegeta.png',
 };
 const _1D = {
-  id: '1D',
-  name: 'Gohan',
-  strength: 470000000,
-  height: 1.85,
-  intellect: 155,
-  technique: 245,
-  transformation: 3,
-  img: 'images/gohan.png',
+  numero: '1D',
+  nome: 'Gohan',
+  forca: 470000000,
+  altura: 1.85,
+  inteligencia: 155,
+  tecnicas: 245,
+  transformacoes: 3,
+  imagem: 'images/gohan.png',
 };
 const _2A = {
-  id: '2A',
-  name: 'Piccolo',
-  strength: 365000000,
-  height: 2.0,
-  intellect: 160,
-  technique: 270,
-  transformation: 2,
-  img: 'images/piccolo.png',
+  numero: '2A',
+  nome: 'Piccolo',
+  forca: 365000000,
+  altura: 2.0,
+  inteligencia: 160,
+  tecnicas: 270,
+  transformacoes: 2,
+  imagem: 'images/piccolo.png',
 };
 const _2B = {
-  id: '2B',
-  name: 'Trunks',
-  strength: 365000000,
-  height: 1.8,
-  intellect: 155,
-  technique: 163,
-  transformation: 1,
-  img: 'images/miraitrunks.png',
+  numero: '2B',
+  nome: 'Trunks',
+  forca: 365000000,
+  altura: 1.8,
+  inteligencia: 155,
+  tecnicas: 163,
+  transformacoes: 1,
+  imagem: 'images/miraitrunks.png',
 };
 const _2C = {
-  id: '2C',
-  name: 'Trunks',
-  strength: 95000000,
-  height: 1.45,
-  intellect: 98,
-  technique: 110,
-  transformation: 1,
-  img: 'images/trunks.png',
+  numero: '2C',
+  nome: 'Trunks',
+  forca: 95000000,
+  altura: 1.45,
+  inteligencia: 98,
+  tecnicas: 110,
+  transformacoes: 1,
+  imagem: 'images/trunks.png',
 };
 const _2D = {
-  id: '2D',
-  name: 'Kuririn',
-  strength: 70000000,
-  height: 1.55,
-  intellect: 150,
-  technique: 175,
-  transformation: 0,
-  img: 'images/kuririn.png',
+  numero: '2D',
+  nome: 'Kuririn',
+  forca: 70000000,
+  altura: 1.55,
+  inteligencia: 150,
+  tecnicas: 175,
+  transformacoes: 0,
+  imagem: 'images/kuririn.png',
 };
 const _3A = {
-  id: '3A',
-  name: 'Kame',
-  strength: 8000,
-  height: 1.6,
-  intellect: 155,
-  technique: 300,
-  transformation: 0,
-  img: 'images/mestrekame.png',
+  numero: '3A',
+  nome: 'Kame',
+  forca: 8000,
+  altura: 1.6,
+  inteligencia: 155,
+  tecnicas: 300,
+  transformacoes: 0,
+  imagem: 'images/mestrekame.png',
 };
 const _3B = {
-  id: '3B',
-  name: 'Yamcha',
-  strength: 50000000,
-  height: 1.8,
-  intellect: 100,
-  technique: 145,
-  transformation: 0,
-  img: 'images/yancha.png',
+  numero: '3B',
+  nome: 'Yamcha',
+  forca: 50000000,
+  altura: 1.8,
+  inteligencia: 100,
+  tecnicas: 145,
+  transformacoes: 0,
+  imagem: 'images/yancha.png',
 };
 const _3C = {
-  id: '3C',
-  name: 'Tenshinhan',
-  strength: 65000000,
-  height: 1.9,
-  intellect: 120,
-  technique: 180,
-  transformation: 0,
-  img: 'images/tenshinhan.png',
+  numero: '3C',
+  nome: 'Tenshinhan',
+  forca: 65000000,
+  altura: 1.9,
+  inteligencia: 120,
+  tecnicas: 180,
+  transformacoes: 0,
+  imagem: 'images/tenshinhan.png',
 };
 const _3D = {
-  id: '3D',
-  name: 'Raditz',
-  strength: 70000,
-  height: 1.95,
-  intellect: 80,
-  technique: 80,
-  transformation: 1,
-  img: 'images/raditz.png',
+  numero: '3D',
+  nome: 'Raditz',
+  forca: 70000,
+  altura: 1.95,
+  inteligencia: 80,
+  tecnicas: 80,
+  transformacoes: 1,
+  imagem: 'images/raditz.png',
 };
 const _4A = {
-  id: '4A',
-  name: 'Freeza',
-  strength: 100000000,
-  height: 1.67,
-  intellect: 135,
-  technique: 245,
-  transformation: 3,
-  img: 'images/freeza.png',
+  numero: '4A',
+  nome: 'Freeza',
+  forca: 100000000,
+  altura: 1.67,
+  inteligencia: 135,
+  tecnicas: 245,
+  transformacoes: 3,
+  imagem: 'images/freeza.png',
 };
 const _4B = {
-  id: '4B',
-  name: 'Nappa',
-  strength: 80000,
-  height: 2.1,
-  intellect: 60,
-  technique: 56,
-  transformation: 1,
-  img: 'images/nappa.png',
+  numero: '4B',
+  nome: 'Nappa',
+  forca: 80000,
+  altura: 2.1,
+  inteligencia: 60,
+  tecnicas: 56,
+  transformacoes: 1,
+  imagem: 'images/nappa.png',
 };
 const _4C = {
-  id: '4C',
-  name: 'Zarbon',
-  strength: 65000000,
-  height: 1.9,
-  intellect: 100,
-  technique: 145,
-  transformation: 1,
-  img: 'images/zarbon.png',
+  numero: '4C',
+  nome: 'Zarbon',
+  forca: 65000000,
+  altura: 1.9,
+  inteligencia: 100,
+  tecnicas: 145,
+  transformacoes: 1,
+  imagem: 'images/zarbon.png',
 };
 const _4D = {
-  id: '4D',
-  name: 'Dodoria',
-  strength: 60000000,
-  height: 1.69,
-  intellect: 99,
-  technique: 144,
-  transformation: 0,
-  img: 'images/dodoria.png',
+  numero: '4D',
+  nome: 'Dodoria',
+  forca: 60000000,
+  altura: 1.69,
+  inteligencia: 99,
+  tecnicas: 144,
+  transformacoes: 0,
+  imagem: 'images/dodoria.png',
 };
 const _5A = {
-  id: '5A',
-  name: '17',
-  strength: 300000000,
-  height: 1.7,
-  intellect: 130,
-  technique: 160,
-  transformation: 0,
-  img: 'images/17.png',
+  numero: '5A',
+  nome: '17',
+  forca: 300000000,
+  altura: 1.7,
+  inteligencia: 130,
+  tecnicas: 160,
+  transformacoes: 0,
+  imagem: 'images/17.png',
 };
 const _5B = {
-  id: '5B',
-  name: '19',
-  strength: 90000000,
-  height: 1.7,
-  intellect: 100,
-  technique: 85,
-  transformation: 0,
-  img: 'images/19.png',
+  numero: '5B',
+  nome: '19',
+  forca: 90000000,
+  altura: 1.7,
+  inteligencia: 100,
+  tecnicas: 85,
+  transformacoes: 0,
+  imagem: 'images/19.png',
 };
 const _5C = {
-  id: '5C',
-  name: 'Maki Gero',
-  strength: 70000000,
-  height: 1.75,
-  intellect: 200,
-  technique: 90,
-  transformation: 0,
-  img: 'images/makigero.png',
+  numero: '5C',
+  nome: 'Maki Gero',
+  forca: 70000000,
+  altura: 1.75,
+  inteligencia: 200,
+  tecnicas: 90,
+  transformacoes: 0,
+  imagem: 'images/makigero.png',
 };
 const _5D = {
-  id: '5D',
-  name: 'Ginyu',
-  strength: 70000000,
-  height: 2.5,
-  intellect: 80,
-  technique: 165,
-  transformation: 0,
-  img: 'images/ginyu.png',
+  numero: '5D',
+  nome: 'Ginyu',
+  forca: 70000000,
+  altura: 2.5,
+  inteligencia: 80,
+  tecnicas: 165,
+  transformacoes: 0,
+  imagem: 'images/ginyu.png',
 };
 const _6A = {
-  id: '6A',
-  name: '16',
-  strength: 310000000,
-  height: 2.0,
-  intellect: 135,
-  technique: 165,
-  transformation: 0,
-  img: 'images/16.png',
+  numero: '6A',
+  nome: '16',
+  forca: 310000000,
+  altura: 2.0,
+  inteligencia: 135,
+  tecnicas: 165,
+  transformacoes: 0,
+  imagem: 'images/16.png',
 };
 const _6B = {
-  id: '6B',
-  name: '18',
-  strength: 295000000,
-  height: 1.7,
-  intellect: 130,
-  technique: 160,
-  transformation: 0,
-  img: 'images/18.png',
+  numero: '6B',
+  nome: '18',
+  forca: 295000000,
+  altura: 1.7,
+  inteligencia: 130,
+  tecnicas: 160,
+  transformacoes: 0,
+  imagem: 'images/18.png',
 };
 const _6C = {
-  id: '6C',
-  name: 'Cell',
-  strength: 400000000,
-  height: 1.95,
-  intellect: 135,
-  technique: 400,
-  transformation: 3,
-  img: 'images/cell.png',
+  numero: '6C',
+  nome: 'Cell',
+  forca: 400000000,
+  altura: 1.95,
+  inteligencia: 135,
+  tecnicas: 400,
+  transformacoes: 3,
+  imagem: 'images/cell.png',
 };
 const _6D = {
-  id: '6D',
-  name: 'Dabura',
-  strength: 400000000,
-  height: 2.1,
-  intellect: 140,
-  technique: 165,
-  transformation: 0,
-  img: 'images/dabura.png',
+  numero: '6D',
+  nome: 'Dabura',
+  forca: 400000000,
+  altura: 2.1,
+  inteligencia: 140,
+  tecnicas: 165,
+  transformacoes: 0,
+  imagem: 'images/dabura.png',
 };
 const _7A = {
-  id: '7A',
-  name: 'Mr. Satan',
-  strength: 300,
-  height: 1.95,
-  intellect: 100,
-  technique: 50,
-  transformation: 0,
-  img: 'images/satan.png',
+  numero: '7A',
+  nome: 'Mr. Satan',
+  forca: 300,
+  altura: 1.95,
+  inteligencia: 100,
+  tecnicas: 50,
+  transformacoes: 0,
+  imagem: 'images/satan.png',
 };
 const _7B = {
-  id: '7B',
-  name: 'Boo',
-  strength: 560000000,
-  height: 1.7,
-  intellect: 50,
-  technique: 410,
-  transformation: 3,
-  img: 'images/bu.png',
+  numero: '7B',
+  nome: 'Boo',
+  forca: 560000000,
+  altura: 1.7,
+  inteligencia: 50,
+  tecnicas: 410,
+  transformacoes: 3,
+  imagem: 'images/bu.png',
 };
 const _7C = {
-  id: '7C',
-  name: 'Majin Boo',
-  strength: 490000000,
-  height: 2.0,
-  intellect: 45,
-  technique: 410,
-  transformation: 0,
-  img: 'images/majinbu.png',
+  numero: '7C',
+  nome: 'Majin Boo',
+  forca: 490000000,
+  altura: 2.0,
+  inteligencia: 45,
+  tecnicas: 410,
+  transformacoes: 0,
+  imagem: 'images/majinbu.png',
 };
 const _7D = {
-  id: '7D',
-  name: 'Videl',
-  strength: 500,
-  height: 1.65,
-  intellect: 154,
-  technique: 55,
-  transformation: 0,
-  img: 'images/videl.png',
+  numero: '7D',
+  nome: 'Vnumeroel',
+  forca: 500,
+  altura: 1.65,
+  inteligencia: 154,
+  tecnicas: 55,
+  transformacoes: 0,
+  imagem: 'images/vnumeroel.png',
 };
 const _8B = {
-  id: '8B',
-  name: 'Tao Pai Pai',
-  strength: 600,
-  height: 1.8,
-  intellect: 110,
-  technique: 80,
-  transformation: 0,
-  img: 'images/taopaipai.png',
+  numero: '8B',
+  nome: 'Tao Pai Pai',
+  forca: 600,
+  altura: 1.8,
+  inteligencia: 110,
+  tecnicas: 80,
+  transformacoes: 0,
+  imagem: 'images/taopaipai.png',
 };
 const _8C = {
-  id: '8C',
-  name: 'Chaos',
-  strength: 6000,
-  height: 1.0,
-  intellect: 94,
-  technique: 147,
-  transformation: 0,
-  img: 'images/chaos.png',
+  numero: '8C',
+  nome: 'Chaos',
+  forca: 6000,
+  altura: 1.0,
+  inteligencia: 94,
+  tecnicas: 147,
+  transformacoes: 0,
+  imagem: 'images/chaos.png',
 };
 
 const characters = [
@@ -359,7 +359,7 @@ let player2 = aleatoriasCartas;
 
 ///////////// Colocando as informações nas cartas (html)/////////////
 
-let id = document.querySelectorAll('.numero');
+let numero = document.querySelectorAll('.numero');
 let nome = document.querySelectorAll('.nome');
 let imagem = document.querySelectorAll('.imagem');
 let forca = document.querySelectorAll('.forca');
@@ -368,28 +368,28 @@ let inteligencia = document.querySelectorAll('.inteligencia');
 let tecnicas = document.querySelectorAll('.tecnicas');
 let transformacoes = document.querySelectorAll('.transformacoes');
 
-// console.log(id);
+// console.log(numero);
 
 const cartaPlayer1 = function (i) {
-  id[0].innerHTML = characters[player1[i]].id;
-  nome[0].innerHTML = characters[player1[i]].name;
-  imagem[0].src = characters[player1[i]].img;
-  forca[0].innerHTML = formaNumero(characters[player1[i]].strength);
-  altura[0].innerHTML = characters[player1[i]].height;
-  inteligencia[0].innerHTML = characters[player1[i]].intellect;
-  tecnicas[0].innerHTML = characters[player1[i]].technique;
-  transformacoes[0].innerHTML = characters[player1[i]].transformation;
+  numero[0].innerHTML = characters[player1[i]].numero;
+  nome[0].innerHTML = characters[player1[i]].nome;
+  imagem[0].src = characters[player1[i]].imagem;
+  forca[0].innerHTML = formaNumero(characters[player1[i]].forca);
+  altura[0].innerHTML = characters[player1[i]].altura;
+  inteligencia[0].innerHTML = characters[player1[i]].inteligencia;
+  tecnicas[0].innerHTML = characters[player1[i]].tecnicas;
+  transformacoes[0].innerHTML = characters[player1[i]].transformacoes;
 };
 
 const cartaPlayer2 = function (i) {
-  id[1].innerHTML = characters[player2[i]].id;
-  nome[1].innerHTML = characters[player2[i]].name;
-  imagem[1].src = characters[player2[i]].img;
-  forca[1].innerHTML = formaNumero(characters[player2[i]].strength);
-  altura[1].innerHTML = characters[player2[i]].height;
-  inteligencia[1].innerHTML = characters[player2[i]].intellect;
-  tecnicas[1].innerHTML = characters[player2[i]].technique;
-  transformacoes[1].innerHTML = characters[player2[i]].transformation;
+  numero[1].innerHTML = characters[player2[i]].numero;
+  nome[1].innerHTML = characters[player2[i]].nome;
+  imagem[1].src = characters[player2[i]].imagem;
+  forca[1].innerHTML = formaNumero(characters[player2[i]].forca);
+  altura[1].innerHTML = characters[player2[i]].altura;
+  inteligencia[1].innerHTML = characters[player2[i]].inteligencia;
+  tecnicas[1].innerHTML = characters[player2[i]].tecnicas;
+  transformacoes[1].innerHTML = characters[player2[i]].transformacoes;
 };
 
 cartaPlayer1(0);
@@ -404,13 +404,37 @@ function formaNumero(numero) {
 ///////////////////////Comparando cartas/////////////////////
 
 const atributos = document.querySelector('.atributos');
+const cartaDireita = document.querySelector('.direita');
+const cartaVirada = document.querySelector('.cartaV');
 
 atributos.addEventListener('click', function (e) {
-  // Seleciona a div//
   const clicado = e.target.closest('.caracteristicas');
-  const valorClicado = clicado.children[1].textContent;
-  //Seleciona o valor mas não se clicar no nome ou no próprio valor//
-  // const clicado = e.target.children[1];
+  const valorClicado = clicado.children[1].classList[0];
 
-  console.log(valorClicado);
+  // console.log(clicado);
+  // console.log(valorClicado);
+
+  let valor2 = clicado.children[1].classList[0];
+  const valorCarta2 = document.querySelector(`.direita .${valor2}`).innerHTML;
+
+  let idJogador1 = clicado
+    .closest('.carta')
+    .querySelector('.numero').textContent;
+
+  console.log(idJogador1);
+
+  let atributo = characters.find(x => x.numero == idJogador1)[valorClicado];
+  console.log(atributo);
+
+  // console.log(valorCarta2);
+  // console.log(valorClicado > valorCarta2);
+
+  if (valorClicado > valorCarta2) {
+    cartaVirada.style.display = 'none';
+    cartaDireita.style.display = 'block';
+    setTimeout(() => {
+      cartaVirada.style.display = 'block';
+      cartaDireita.style.display = 'none';
+    }, 4000);
+  }
 });

@@ -80,11 +80,11 @@ body {
 }
 
 .direita {
-  /* display: none; */
+  display: none;
 }
 
 .cartaV {
-  display: none;
+  display: block;
 }
 
 .imagem {
