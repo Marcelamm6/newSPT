@@ -355,7 +355,7 @@ while (i--) {
 let player1 = aleatoriasCartas.splice(15);
 let player2 = aleatoriasCartas;
 
-console.log(player1, player2);
+// console.log(player1, player2);
 
 // console.log(player1[0]);
 
@@ -461,9 +461,11 @@ atributos.addEventListener('click', function (e) {
   // console.log(atributo2);
 
   let nomeJ1 = document.querySelector('.carta.esquerda .nome').textContent;
-  console.log(nomeJ1);
+  // console.log(nomeJ1);
 
   /////////comparando////////////
+
+  cartaEsquerda.style.pointerEvents = 'none';
 
   if (atributo1 > atributo2) {
     cartaVirada.style.display = 'none';
@@ -471,6 +473,7 @@ atributos.addEventListener('click', function (e) {
     document.querySelector(`.${valorClicado}`).style.background = '#8ce99a';
     document.querySelector(`.direita .${valor2}`).style.background = '#ff8787';
     setTimeout(() => {
+      cartaEsquerda.style.pointerEvents = 'auto';
       cartaVirada.style.display = 'flex';
       cartaDireita.style.display = 'none';
       document.querySelector(`.${valorClicado}`).style.background = 'none';
@@ -491,6 +494,7 @@ atributos.addEventListener('click', function (e) {
     document.querySelector(`.${valorClicado}`).style.background = '#ff8787';
     document.querySelector(`.direita .${valor2}`).style.background = '#8ce99a';
     setTimeout(() => {
+      cartaEsquerda.style.pointerEvents = 'auto';
       cartaVirada.style.display = 'flex';
       cartaDireita.style.display = 'none';
       document.querySelector(`.${valorClicado}`).style.background = 'none';
@@ -511,6 +515,7 @@ atributos.addEventListener('click', function (e) {
     document.querySelector(`.${valorClicado}`).style.background = '#ffe066';
     document.querySelector(`.direita .${valor2}`).style.background = '#ffe066';
     setTimeout(() => {
+      cartaEsquerda.style.pointerEvents = 'auto';
       cartaVirada.style.display = 'flex';
       cartaDireita.style.display = 'none';
       document.querySelector(`.${valorClicado}`).style.background = 'none';
