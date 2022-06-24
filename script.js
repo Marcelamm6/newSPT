@@ -539,7 +539,7 @@ atributos.addEventListener('click', function (e) {
     player2.shift();
     console.log(player1, player2);
   }
-  if (pontos1.textContent == 16) {
+  if (pontos1.textContent == 30) {
     opacidade.forEach(item => (item.style.display = 'none'));
 
     ganhou.style.display = 'block';
@@ -547,7 +547,7 @@ atributos.addEventListener('click', function (e) {
     document.body.style.alignItems = 'unset';
     btnProximo.style.display = 'none';
   }
-  if (pontos2.textContent == 16) {
+  if (pontos2.textContent == 30) {
     opacidade.forEach(item => (item.style.display = 'none'));
 
     perdeu.style.display = 'block';
