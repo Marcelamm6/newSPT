@@ -12,6 +12,7 @@
   body {
     height: auto;
     margin-top: 3rem;
+    background-attachment: fixed;
   }
   .pagina {
     grid-template-columns: 1fr;
