@@ -355,7 +355,7 @@ while (i--) {
 let player1 = aleatoriasCartas.splice(15);
 let player2 = aleatoriasCartas;
 
-// console.log(player1, player2);
+console.log(player1, player2);
 
 // console.log(player1[0]);
 
@@ -414,7 +414,7 @@ console.log(nomeJ1);
 // FIXME:
 // function spt() {
 //   if (player1[0] == 1) {
-//     superTrunfo1.style.display = 'flex';
+// superTrunfo1.style.display = 'flex';
 //   }
 // }
 // spt();
@@ -429,13 +429,27 @@ const cartaEsquerda = document.querySelector('.esquerda');
 const cartaVirada = document.querySelector('.cartaV');
 const cartaViradaE = document.querySelector('.cartaEV');
 
+const ganhou = document.querySelector('.ganhou');
+const perdeu = document.querySelector('.perdeu');
+
 const pontos1 = document.querySelector('.pontos1');
 const pontos2 = document.querySelector('.pontos2');
 
-pontos1.textContent = 0;
-pontos2.textContent = 0;
+const opacidade = document.querySelectorAll('.opac');
+const fundo = document.querySelectorAll('.cor');
+
+pontos1.textContent = 15;
+pontos2.textContent = 15;
 
 ////////valor clicado//////////
+
+function jogou() {
+  cartaVirada.style.display = 'none';
+  cartaDireita.style.display = 'flex';
+  btnProximo.style.display = 'block';
+  cartaEsquerda.style.pointerEvents = 'none';
+  cartaDireita.style.pointerEvents = 'none';
+}
 
 atributos.addEventListener('click', function (e) {
   const clicado = e.target.closest('.caracteristicas');
@@ -450,16 +464,13 @@ atributos.addEventListener('click', function (e) {
 
   let idJogador2 = document.querySelector('.carta.direita .numero').textContent;
 
-  // console.log(nomeJ1);
-  // console.log(idJogador1);
-  // console.log(idJogador2);
-
   let atributo1 = characters.find(x => x.numero == idJogador1)[valorClicado];
   let atributo2 = characters.find(x => x.numero == idJogador2)[valor2];
 
   // console.log(atributo1);
   // console.log(atributo2);
 
+  //FIXME: encontrar goku
   let nomeJ1 = document.querySelector('.carta.esquerda .nome').textContent;
   // console.log(nomeJ1);
 
@@ -468,65 +479,84 @@ atributos.addEventListener('click', function (e) {
   cartaEsquerda.style.pointerEvents = 'none';
 
   if (atributo1 > atributo2) {
-    cartaVirada.style.display = 'none';
-    cartaDireita.style.display = 'flex';
+    jogou();
+
     document.querySelector(`.${valorClicado}`).style.background = '#8ce99a';
     document.querySelector(`.direita .${valor2}`).style.background = '#ff8787';
-    setTimeout(() => {
-      cartaEsquerda.style.pointerEvents = 'auto';
-      cartaVirada.style.display = 'flex';
-      cartaDireita.style.display = 'none';
-      document.querySelector(`.${valorClicado}`).style.background = 'none';
-      document.querySelector(`.direita .${valor2}`).style.background = 'none';
-      player1.push(player2[0]);
-      player2.shift([0]);
-      player1.push(player1[0]);
-      player1.shift([0]);
-      // console.log(player1, player2);
-      cartaPlayer1(0);
-      cartaPlayer2(0);
-    }, 3000);
+
+    player1.push(player2[0]);
+    player2.shift();
+    player1.push(player1[0]);
+    player1.shift();
+    console.log(player1, player2);
+
     pontos1.textContent++;
+    pontos2.textContent--;
   }
   if (atributo1 < atributo2) {
-    cartaVirada.style.display = 'none';
-    cartaDireita.style.display = 'flex';
+    jogou();
+
     document.querySelector(`.${valorClicado}`).style.background = '#ff8787';
     document.querySelector(`.direita .${valor2}`).style.background = '#8ce99a';
-    setTimeout(() => {
-      cartaEsquerda.style.pointerEvents = 'auto';
-      cartaVirada.style.display = 'flex';
-      cartaDireita.style.display = 'none';
-      document.querySelector(`.${valorClicado}`).style.background = 'none';
-      document.querySelector(`.direita .${valor2}`).style.background = 'none';
-      player2.push(player1[0]);
-      player1.shift([0]);
-      player2.push(player2[0]);
-      player2.shift([0]);
-      // console.log(player1, player2);
-      cartaPlayer1(0);
-      cartaPlayer2(0);
-    }, 2000);
+
+    player2.push(player1[0]);
+    player1.shift();
+    player2.push(player2[0]);
+    player2.shift();
+    console.log(player1, player2);
+
     pontos2.textContent++;
+    pontos1.textContent--;
   }
   if (atributo1 == atributo2) {
-    cartaVirada.style.display = 'none';
-    cartaDireita.style.display = 'flex';
+    jogou();
+
     document.querySelector(`.${valorClicado}`).style.background = '#ffe066';
     document.querySelector(`.direita .${valor2}`).style.background = '#ffe066';
-    setTimeout(() => {
-      cartaEsquerda.style.pointerEvents = 'auto';
-      cartaVirada.style.display = 'flex';
-      cartaDireita.style.display = 'none';
-      document.querySelector(`.${valorClicado}`).style.background = 'none';
-      document.querySelector(`.direita .${valor2}`).style.background = 'none';
-      player1.push(player1[0]);
-      player1.shift([0]);
-      player2.push(player2[0]);
-      player2.shift([0]);
-      // console.log(player1, player2);
-      cartaPlayer1(0);
-      cartaPlayer2(0);
-    }, 2000);
+
+    player1.push(player1[0]);
+    player1.shift();
+    player2.push(player2[0]);
+    player2.shift();
+    console.log(player1, player2);
   }
+  if (pontos1.textContent == 30) {
+    opacidade.forEach(item => (item.style.display = 'none'));
+
+    ganhou.style.display = 'block';
+    document.querySelector('.jogar').style.display = 'block';
+    btnProximo.style.display = 'none';
+  }
+  if (pontos2.textContent == 30) {
+    opacidade.forEach(item => (item.style.display = 'none'));
+
+    perdeu.style.display = 'block';
+    document.querySelector('.jogar').style.display = 'block';
+    btnProximo.style.display = 'none';
+  }
+});
+
+const btnProximo = document.querySelector('.proximo');
+
+btnProximo.addEventListener('click', function proximo(e) {
+  e.preventDefault();
+
+  cartaPlayer1(0);
+  cartaPlayer2(0);
+
+  cartaVirada.style.display = 'flex';
+  cartaDireita.style.display = 'none';
+
+  fundo.forEach(item => (item.style.background = '#dddddd'));
+
+  cartaEsquerda.style.pointerEvents = 'auto';
+  btnProximo.style.display = 'none';
+});
+
+////////////////////////Jogar novamente////////////////////
+
+let btnJogar = document.querySelector('.jogar');
+
+btnJogar.addEventListener('click', function () {
+  window.location.reload();
 });
