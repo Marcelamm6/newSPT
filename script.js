@@ -438,10 +438,12 @@ const pontos2 = document.querySelector('.pontos2');
 const opacidade = document.querySelectorAll('.opac');
 const fundo = document.querySelectorAll('.cor');
 
+const btnProximo = document.querySelector('.proximo');
+
 pontos1.textContent = 15;
 pontos2.textContent = 15;
 
-////////valor clicado//////////
+//////////funcoes/////////////
 
 function jogou() {
   cartaVirada.style.display = 'none';
@@ -450,6 +452,23 @@ function jogou() {
   cartaEsquerda.style.pointerEvents = 'none';
   cartaDireita.style.pointerEvents = 'none';
 }
+
+btnProximo.addEventListener('click', function proximo(e) {
+  e.preventDefault();
+
+  cartaPlayer1(0);
+  cartaPlayer2(0);
+
+  cartaVirada.style.display = 'flex';
+  cartaDireita.style.display = 'none';
+
+  fundo.forEach(item => (item.style.background = '#dddddd'));
+
+  cartaEsquerda.style.pointerEvents = 'auto';
+  btnProximo.style.display = 'none';
+});
+
+////////valor clicado//////////
 
 atributos.addEventListener('click', function (e) {
   const clicado = e.target.closest('.caracteristicas');
@@ -534,23 +553,6 @@ atributos.addEventListener('click', function (e) {
     document.querySelector('.jogar').style.display = 'block';
     btnProximo.style.display = 'none';
   }
-});
-
-const btnProximo = document.querySelector('.proximo');
-
-btnProximo.addEventListener('click', function proximo(e) {
-  e.preventDefault();
-
-  cartaPlayer1(0);
-  cartaPlayer2(0);
-
-  cartaVirada.style.display = 'flex';
-  cartaDireita.style.display = 'none';
-
-  fundo.forEach(item => (item.style.background = '#dddddd'));
-
-  cartaEsquerda.style.pointerEvents = 'auto';
-  btnProximo.style.display = 'none';
 });
 
 ////////////////////////Jogar novamente////////////////////
