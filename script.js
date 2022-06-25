@@ -412,12 +412,12 @@ let nomeJ1 = document.querySelector('.carta.esquerda .nome').textContent;
 console.log(nomeJ1);
 
 // FIXME:
-// function spt() {
-//   if (player1[0] == 1) {
-// superTrunfo1.style.display = 'flex';
-//   }
-// }
-// spt();
+function spt() {
+  if (player1[0] == 1) {
+    superTrunfo1.style.display = 'flex';
+  }
+}
+spt();
 
 /////////////////////////////////////////////////////////////
 ///////////////////////Comparando cartas/////////////////////
@@ -466,6 +466,8 @@ btnProximo.addEventListener('click', function proximo(e) {
 
   cartaEsquerda.style.pointerEvents = 'auto';
   btnProximo.style.display = 'none';
+
+  spt();
 });
 
 ////////valor clicado//////////
@@ -488,10 +490,6 @@ atributos.addEventListener('click', function (e) {
 
   // console.log(atributo1);
   // console.log(atributo2);
-
-  //FIXME: encontrar goku
-  let nomeJ1 = document.querySelector('.carta.esquerda .nome').textContent;
-  // console.log(nomeJ1);
 
   /////////comparando////////////
 
