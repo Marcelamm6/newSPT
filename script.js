@@ -415,6 +415,8 @@ console.log(nomeJ1);
 function spt() {
   if (player1[0] == 1) {
     superTrunfo1.style.display = 'flex';
+  } else {
+    superTrunfo1.style.display = 'none';
   }
 }
 spt();
