@@ -411,7 +411,6 @@ let superTrunfo2 = document.querySelector('.sp--direita');
 let nomeJ1 = document.querySelector('.carta.esquerda .nome').textContent;
 console.log(nomeJ1);
 
-// FIXME:
 function spt() {
   if (player1[0] == 1) {
     superTrunfo1.style.display = 'flex';
