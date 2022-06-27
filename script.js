@@ -497,10 +497,12 @@ function spt() {
 spt();
 
 let superTrunfo = document.querySelector('.super-trunfo');
-let idJogador2 = document.querySelector('.carta.direita .numero').textContent;
 
 superTrunfo.addEventListener('click', function () {
-  if (idJogador2.charAt(1) == 'A') {
+  if (
+    document.querySelector('.carta.direita .numero').textContent.charAt(1) ==
+    'A'
+  ) {
     jogou();
     perdedor();
 
@@ -528,35 +530,33 @@ atributos.addEventListener('click', function (e) {
     .closest('.carta')
     .querySelector('.numero').textContent;
 
+  let idJogador2 = document.querySelector('.carta.direita .numero').textContent;
+
   let atributo1 = characters.find(x => x.numero == idJogador1)[valorClicado];
   let atributo2 = characters.find(x => x.numero == idJogador2)[valor2];
 
-  // console.log(atributo1);
-  // console.log(atributo2);
+  console.log(atributo1);
+  console.log(atributo2);
 
   /////////comparando////////////
 
   cartaEsquerda.style.pointerEvents = 'none';
 
   if (atributo1 > atributo2) {
+    vencedor();
     jogou();
 
     document.querySelector(`.${valorClicado}`).style.background = '#8ce99a';
     document.querySelector(`.direita .${valor2}`).style.background = '#ff8787';
-
-    vencedor();
   }
   if (atributo1 < atributo2) {
+    perdedor();
     jogou();
 
     document.querySelector(`.${valorClicado}`).style.background = '#ff8787';
     document.querySelector(`.direita .${valor2}`).style.background = '#8ce99a';
-
-    perdedor();
   }
   if (atributo1 == atributo2) {
-    jogou();
-
     document.querySelector(`.${valorClicado}`).style.background = '#ffe066';
     document.querySelector(`.direita .${valor2}`).style.background = '#ffe066';
 
@@ -565,6 +565,8 @@ atributos.addEventListener('click', function (e) {
     player2.push(player2[0]);
     player2.shift();
     console.log(player1, player2);
+
+    jogou();
   }
   if (pontos1.textContent == 30) {
     opacidade.forEach(item => (item.style.display = 'none'));
