@@ -411,15 +411,6 @@ let superTrunfo2 = document.querySelector('.sp--direita');
 let nomeJ1 = document.querySelector('.carta.esquerda .nome').textContent;
 console.log(nomeJ1);
 
-function spt() {
-  if (player1[0] == 1) {
-    superTrunfo1.style.display = 'flex';
-  } else {
-    superTrunfo1.style.display = 'none';
-  }
-}
-spt();
-
 /////////////////////////////////////////////////////////////
 ///////////////////////Comparando cartas/////////////////////
 ////////////////////////////////////////////////////////////
@@ -464,11 +455,58 @@ btnProximo.addEventListener('click', function proximo(e) {
   cartaDireita.style.display = 'none';
 
   fundo.forEach(item => (item.style.background = '#dddddd'));
+  document.querySelector('.carta.direita .numero').style.background = 'none';
 
   cartaEsquerda.style.pointerEvents = 'auto';
   btnProximo.style.display = 'none';
 
   spt();
+});
+
+////////////////////Super trunfo///////////////////////
+
+function spt() {
+  if (player1[0] == 1) {
+    superTrunfo1.style.display = 'flex';
+  } else {
+    superTrunfo1.style.display = 'none';
+  }
+}
+spt();
+
+let superTrunfo = document.querySelector('.super-trunfo');
+let idJogador2 = document.querySelector('.carta.direita .numero').textContent;
+
+superTrunfo.addEventListener('click', function () {
+  if (idJogador2.charAt(1) == 'A') {
+    jogou();
+
+    player2.push(player1[0]);
+    player1.shift();
+    player2.push(player2[0]);
+    player2.shift();
+    console.log(player1, player2);
+
+    pontos2.textContent++;
+    pontos1.textContent--;
+
+    document.querySelector('.carta.direita .numero').style.background =
+      '#8ce99a';
+  } else {
+    jogou();
+
+    player1.push(player2[0]);
+    player2.shift();
+    player1.push(player1[0]);
+    player1.shift();
+    console.log(player1, player2);
+
+    pontos1.textContent++;
+    pontos2.textContent--;
+
+    document.querySelector('.carta.direita .numero').style.background =
+      '#ff8787';
+  }
 });
 
 ////////valor clicado//////////
@@ -483,8 +521,6 @@ atributos.addEventListener('click', function (e) {
   let idJogador1 = clicado
     .closest('.carta')
     .querySelector('.numero').textContent;
-
-  let idJogador2 = document.querySelector('.carta.direita .numero').textContent;
 
   let atributo1 = characters.find(x => x.numero == idJogador1)[valorClicado];
   let atributo2 = characters.find(x => x.numero == idJogador2)[valor2];
