@@ -445,6 +445,28 @@ function jogou() {
   cartaDireita.style.pointerEvents = 'none';
 }
 
+function vencedor() {
+  player1.push(player2[0]);
+  player2.shift();
+  player1.push(player1[0]);
+  player1.shift();
+  console.log(player1, player2);
+
+  pontos1.textContent++;
+  pontos2.textContent--;
+}
+
+function perdedor() {
+  player2.push(player1[0]);
+  player1.shift();
+  player2.push(player2[0]);
+  player2.shift();
+  console.log(player1, player2);
+
+  pontos2.textContent++;
+  pontos1.textContent--;
+}
+
 btnProximo.addEventListener('click', function proximo(e) {
   e.preventDefault();
 
@@ -480,29 +502,13 @@ let idJogador2 = document.querySelector('.carta.direita .numero').textContent;
 superTrunfo.addEventListener('click', function () {
   if (idJogador2.charAt(1) == 'A') {
     jogou();
-
-    player2.push(player1[0]);
-    player1.shift();
-    player2.push(player2[0]);
-    player2.shift();
-    console.log(player1, player2);
-
-    pontos2.textContent++;
-    pontos1.textContent--;
+    perdedor();
 
     document.querySelector('.carta.direita .numero').style.background =
       '#8ce99a';
   } else {
     jogou();
-
-    player1.push(player2[0]);
-    player2.shift();
-    player1.push(player1[0]);
-    player1.shift();
-    console.log(player1, player2);
-
-    pontos1.textContent++;
-    pontos2.textContent--;
+    vencedor();
 
     document.querySelector('.carta.direita .numero').style.background =
       '#ff8787';
@@ -538,14 +544,7 @@ atributos.addEventListener('click', function (e) {
     document.querySelector(`.${valorClicado}`).style.background = '#8ce99a';
     document.querySelector(`.direita .${valor2}`).style.background = '#ff8787';
 
-    player1.push(player2[0]);
-    player2.shift();
-    player1.push(player1[0]);
-    player1.shift();
-    console.log(player1, player2);
-
-    pontos1.textContent++;
-    pontos2.textContent--;
+    vencedor();
   }
   if (atributo1 < atributo2) {
     jogou();
@@ -553,14 +552,7 @@ atributos.addEventListener('click', function (e) {
     document.querySelector(`.${valorClicado}`).style.background = '#ff8787';
     document.querySelector(`.direita .${valor2}`).style.background = '#8ce99a';
 
-    player2.push(player1[0]);
-    player1.shift();
-    player2.push(player2[0]);
-    player2.shift();
-    console.log(player1, player2);
-
-    pontos2.textContent++;
-    pontos1.textContent--;
+    perdedor();
   }
   if (atributo1 == atributo2) {
     jogou();
